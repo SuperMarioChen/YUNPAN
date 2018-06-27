@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height:851px;
+            width:1366px;
+            padding-top:59px;
+            padding-left:60px;
+            background:#6ea7b2;
+        }
+        .container{
+            height:715px;
+            width:1200px;
+            background:#ffffff
+        }
+        .container_top{
+            height:70px;
+            width:100%;
+           
+        }
+        .container_content{
+            height:60px;
+            width:100%;
+            background:#ecf1f7;
+        }
+        .container_bottom{
+            height:580px;
+            width:100%;
+            background:#ffffff;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .top_left,.top_content{
+            float: left;
+        }
+        .top_left{
+            height:70px;
+            width:220px;
+            margin-left: 20px;
+            background:url(img/tt.jpg) no-repeat 0 17px;
+            background-size: 130px 30px;
+        }
+        .top_content{
+            width:614px;
+            height:53;
+            padding-top:17px;
+        }
+        .top_content>div{
+            float: left;
+            padding:0 20px 0 20px;
+            margin-right:14px;
+            font:14px/40px "宋体";
+            border-radius:20px;
+            color:white;
+        }
+        
+        .red{
+            background:red
+        }
+        .green{
+            background: green
+        }
+        .tishi{
+            position: absolute;
+            top: -50px;
+            transition:.3s;
+            margin-top:-20px;
+            
+        }
+        .top_right{
+            float:right;
+            height:70px;
+            width:100px;
+            padding-right:40px;
+        }
+        .top_right div{
+            
+            float: left;
+        }
+        .user{
+            margin-top:20px;
+        }
+        .top_right_content img{
+            vertical-align:middle;
+        }
+        .user_right{
+            margin-top:20px;
+            margin-right:10px;
+        }
+        .top_right_right{
+            margin-top:26px;
+            height:20px;
+            width: 17px;
+            padding-left:16px;
+            border-left:1px solid #6e7881;
+        }
+        .content_left{
+            float: left;
+            padding-left:20px;
+            padding-top:14px;
+        }
+        .content_left span{
+            float: left;
+            font:14px/36px "宋体";
+            color:#cacfd2;
+            margin-right:12px;
+            padding:0 22px 0 22px;
+            border: 1px solid #cccbd1;
+            background:#ffffff;
+        }
+        .content_left span img{
+            vertical-align:middle;
+        }
+        .content_right{
+            float:right;
+            padding-right:8px;
+            padding-top:14px;
+        }
+        .content_right span{
+            float: left;
+            padding:0 10px 0 10px;
+            border: 1px solid #cccbd1;
+            background:#ffffff;
+            font:14px/36px "宋体";
+            color:#cacfd2;
+            margin-right:12px;
+        }
+        .container_bottom>div{
+            float: left;
+            
+        }
+        .bottom_left{
+            border-right:1px solid #ecf1f7;
+            height:100%;
+            width:260px;
+        }
+        .bottom_right{
+            height:100%;
+            width:930px;
+        }
+        .bottom_left_title{
+            border-bottom: 1px solid #ecf1f7;
+            height:50px;
+            padding-left:16px;
+            width: 100%;
+        }
+        .bottom_right_title{
+            border-bottom: 1px solid #ecf1f7;
+            height:50px;
+            width: 100%;
+        }
+        .xia{
+            margin-top:5px;
+            
+        }
+        .wenjian{
+            margin-top:3px;
+            
+        }
+        img{
+            vertical-align: top;
+        }
+        .name{
+            display: inline-block;
+            
+            font:14px/34px "宋体"；
+
+        }
+        .content_right img{
+            margin-top:10px;
+        }
+        .content_right .right_right{
+            margin-top:15px
+        }
+        .kuang{
+            float: left;
+            margin: 17px 25px 0 15px;
+            height:15px;
+            width:15px;
+            border:1px solid blueviolet;
+        }
+        .bottom_right_title span{
+            float: left;
+            font:14px/48px "宋体";
+            padding:0 18px;
+            color: #000000;
+        }
+        .bottom_right_title>div{
+            float: left;
+        }
+        
+        .bottom_right_title img{
+            margin-top:14px;
+        }
+        .titlebox div{
+            float: left;
+        }
+        .active{
+            color:#55addc;
+            border-bottom:1px solid #55addc;
+        }
+        
+        .bottom_right_content>div{
+            float: left;
+            height:175px;
+            width:175px;
+            margin: 18px;
+            background:#ffffff;
+           
+        }
+        
+        .shengcheng div:nth-child(1){
+            height:36px;
+            
+        }
+        .shengcheng div:nth-child(2){
+            padding-left:52px;
+            height:94px;
+        }
+        .shengcheng div:nth-child(3){
+            text-align: center;
+            font:14px/16px "宋体"
+        }
+        
+        ul,li{
+            
+            list-style: none;
+        }
+        ul{
+            margin-top:0px;
+        }
+        .shengcheng i{
+            display: inline-block;
+            height:100%;
+            width: 100%;
+            
+        }
+        .shengcheng{
+            border:1px solid transparent
+        }
+        .checked{
+            background: url(img/checked.png) no-repeat ;
+        }
+        .xuan{
+            border:1px solid red;
+        }
+        .tan{
+            height:100%;
+            width:100%;
+            
+            
+            position: absolute;
+            
+            display: none
+        }
+        .move {
+            width: 300px;
+            height: 400px;
+            border: 1px dashed #000;
+            background: rgb(238, 238, 232);
+            opacity: .8;
+            position: absolute;
+            top:150px;
+            left:250px;
+        }
+        .movetitle{
+            height:50px;
+        }
+        .movetitle div:nth-child(1){
+            float: left;
+            color:black;
+            margin: 10px;
+            font:bold 16px/20px "宋体"
+            
+        }
+        .movetitle div:nth-child(2){
+            float: right;
+            margin: 10px;
+        }
+        .movecontent{
+            height:300px
+        }
+        .moveBottem{
+            height:50px;
+            text-align: center
+        }
+        .moveBottem button{
+            margin: 10px
+        }
+        .miaov {
+            width: 0px;
+            height: 0px;
+            border: 1px dashed #000;
+            background: yellow;
+            opacity: .5;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .jiaodian{
+            display: none
+        }
+        .xianshi{
+            display: block
+        }
+        .yincang{
+            display: none
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="tan">
+                <div class="move">
+                    <div class="clearfix movetitle">
+                        <div>请选择要移动到的文件夹</div>
+                        <div class="closeImg">
+                            <img src="img/icon_close.png"/>
+                        </div>
+                    </div>
+                    <div class="movecontent"></div>
+                    <div class="moveBottem">
+                        <button class="trueBtn" disabled>确认</button>
+                        <button class="closeBtn">取消</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container_top clearfix">
+                <div class="top_left"></div>
+                <div class="top_content">
+                    
+                    <div class="shanchu yincang">删除文件成功</div>
+                    <div class="qingxuan yincang">请选择文件</div>
+                    <div class="gaiming yincang">只能同时改一个文件的名字</div>
+                    <div class="chongming yincang">已经有此文件夹</div>
+                    <div class="mingkong yincang">名字不能为空</div>
+                    <div class="meixuan yincang">请选中文件夹</div>
+                    <diV class="tishi"></diV>
+                </div>
+                <div class="top_right">
+                    <div class="top_right_content">
+                        <img class="user" src="img/user-ico.jpg"/>
+                        <img class="user_right"src="img/jt.jpg"/>
+                    </div>
+                    <div class="top_right_right">
+                        <img src="img/set.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="container_content clearfix">
+                <div class="content_left">
+                    <span>
+                        <img src="img/download.png"/>
+                        下载
+                    </span>
+                    <span>
+                        <img src="img/fenxiang.png"/>
+                        分享
+                    </span>
+                    <span class="moveTo">
+                        <img src="img/move.png"/>
+                        移动到
+                    </span>
+                    <span class="newName">
+                        <img src="img/ming.png"/>
+                        重命名
+                    </span>
+                    <span class="del">
+                        <img src="img/delete.png"/>
+                        删除
+                    </span>
+                    <span class="creatNewFile">
+                        <img src="img/create.png"/>
+                        新建文件夹
+                    </span>
+                    <span>
+                        <img src="img/refresh.png"/>
+                    </span>
+                </div>
+                <div class="content_right">
+                    <span>
+                        <img src="img/ico_type.jpg"/>
+                    </span>
+                    <span>
+                        <img src="img/sort_type.png"/>
+                        <img  class="right_right"src="img/jt.jpg"/>
+                    </span>
+                </div>
+            </div>
+            <div class="container_bottom clearfix">
+                
+                <div class="bottom_left">
+                    <!-- <div class="bottom_left_title">
+                        <img class="xia"src="img/folder_jt1.png"/>
+                        <img class="wenjian"src="img/s_folder2.png"/>
+                        <span class="name">微云</span>
+                    </div> -->
+                    <div class="shu"></div>
+                </div>
+                <div class="bottom_right">
+                    
+                    <div class="bottom_right_title clearfix">
+                        <i class="kuang" ></i>
+                        <div class="titlebox">
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="bottom_right_content clearfix">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/jquery-3.3.1.js"></script>
+    <script>
+        var data = [
+				{
+					title: '微云',
+					id: 1,
+                    pid: -1
+				},
+				{
+					title: '我的音乐',
+					id:1234,
+					pid: 1
+				},
+				{
+					title: '我的文档',
+					id:55555,
+					pid: 1
+				},
+				{
+					title: '我的电影',
+					id:7777,
+					pid: 1
+				},
+				{
+					title: '周杰伦',
+					id:45789,
+					pid: 1234
+				},
+				{
+					title: '王杰',
+					id:678900,
+					pid: 1234
+				},
+				{
+					title: '谢天笑',
+					id:5555789,
+					pid: 1234
+				},
+				{
+					title: 'js文档',
+					id:6666788,
+					pid: 55555
+				},
+				{
+					title: '科幻片',
+					id:6788124,
+					pid: 7777
+				},
+				{
+					title: '喜剧片',
+					id:890124680,
+					pid: 7777
+                }
+                
+            ]
+            
+            
+
+            // 找到指定id所有的父级
+			
+			function getParentAllById(id){
+				var arr = [];
+				var item = getItemById(id); // 先找到这条数据
+				if(item){
+					arr.push(item);
+					// 递归调用这个元素，函数会返回当前数据的父级
+					// 父级和当前的元素拼起来
+					arr = arr.concat(getParentAllById(item.pid))
+				}
+				return arr;	
+			}
+            // 通过一个id找到所有的子级
+			/*
+				参数 是一个id
+				返回值 数组 没有子级就是空数组
+			*/
+			function getChildsById(id){
+				var arr = [];
+				for( var i = 0; i < data.length; i++ ){
+					if(data[i].pid == id){
+						arr.push(data[i]);
+					}
+				}	
+				return arr;
+			}
+            // 根据id找到数据中的某一项
+			function getItemById(id){
+				for( var i = 0; i < data.length; i++ ){
+					if(data[i].id == id){
+						return data[i]
+					}
+				}
+
+				return null;	
+			}
+            // 作用：根据传入的id，生成这个id下的这一级的ul结构
+			function createTreeHtml(id){
+				// 通过传入的id，找到所有的子级
+				// 有子级生成ul结构	
+				
+				var childs = getChildsById(id);
+				
+				var html = '';
+				if(childs.length){
+					html += '<ul>';
+					for( var i = 0; i < childs.length; i++ ){
+						html += '<li sid="'+childs[i].id+'"><div><img class="xia"src="img/folder_jt1.png"/>\
+                        <img class="wenjian"src="img/s_folder2.png"/>\
+                        <span>'+childs[i].title+'</span></div>';
+						html += createTreeHtml(childs[i].id)
+						html += '</li>'
+					}		
+					html += '</ul>'
+				}
+
+				
+
+				return html;
+			}
+            // 生成左侧树
+            $('.shu').html(createTreeHtml(-1));
+            $('.titlebox').html(createPathHtml(1));
+            $('.bottom_right_content').html(createFileHtml(1));
+            // 点击生成右侧标题
+            $('.bottom_left').on('click','li',function(e){
+                var id = $(this).attr('sid');
+                // 找到对应的树形位置
+                for(var i=0;i<$('.bottom_left li').length;i++){
+                    if($('.bottom_left li').eq(i).attr('sid')===id){
+                        $('.bottom_left li div').css('background','')
+                        $('.bottom_left li div').eq(i).css('background','yellow')
+                    }
+                }
+               
+               
+				// 找到右边标题对应的
+				$('.titlebox').html(createPathHtml(id));
+                for(var i=0;i<$('.titlebox span').length;i++){
+                    if($('.titlebox div').eq(i).attr('sid')===id){
+                        $('.titlebox div').eq(i).attr('class','active')
+                        
+                    }
+                }
+                // 生成右侧内容
+                $('.bottom_right_content').html(createFileHtml(id))
+                
+				e.stopPropagation();
+                
+            })
+            // 传入树形点击元素生成右侧标题结构
+            function createPathHtml(id){
+                var parents = getParentAllById(id).reverse();
+                
+				var spans = ''
+				for( var i = 0; i < parents.length; i++ ){
+                    spans+='<div sid="'+parents[i].id+'" cdd="ddv">\
+                                <span >'+parents[i].title+'</span>\
+                                <img src="img/br_jt.png"/>\
+                            </div>'
+				}	
+				return spans;
+            }
+            // 传入树形点击元素生成右侧内容结构
+            function createFileHtml(id){
+				var childs = getChildsById(id);
+				var filesHtml = ''
+				if(childs.length){
+					for( var i = 0; i < childs.length; i++ ){
+                        
+						filesHtml += '<div class="shengcheng" sid="'+childs[i].id+'">\
+                                        <div>\
+                                            <i></i>\
+                                        </div>\
+                                        <div class="diantu" >\
+                                            <img src="img/folder-b.png"/>\
+                                        </div>\
+                                        <div class="mingzi">\
+                                            <input type="text" class="jiaodian"/>\
+                                            <p class="pp">'+childs[i].title+'</p>\
+                                        </div>\
+                                    </div>'
+					}
+				}else{
+                    filesHtml='<img src="img/cover-bg.png" />'
+                    
+                }
+				return filesHtml;	
+			}
+            // 点击右侧标题
+            $('.titlebox').on('click','div[cdd]',function(){
+                var id = $(this).attr('sid');
+				// 点击右侧标题找到树形菜单对应位置
+                for(var i=0;i<$('.bottom_left li').length;i++){
+                    if($('.bottom_left li').eq(i).attr('sid')===id){
+                        console.log(id)
+                        $('.bottom_left li div').css('background','')
+                        $('.bottom_left li div').eq(i).css('background','yellow')
+                    }
+                }
+                // 重新生成右边标题
+                $('.titlebox').html(createPathHtml(id));
+                // 找到自己对应的
+                for(var i=0;i<$('.titlebox span').length;i++){
+                    if($('.titlebox div').eq(i).attr('sid')===id){
+                        $('.titlebox div').eq(i).attr('class','active')
+                        
+                    }
+                }
+                // 重新生成右边内容
+                $('.bottom_right_content').html(createFileHtml(id))
+				
+            })
+            // 点击右侧内容
+            $('.bottom_right_content').on('click','.shengcheng',function(e){
+                // 现在的this是指向shengcheng 的
+                if(e.target.nodeName==='INPUT'){
+                    return
+                }
+                // 如果点在i上不执行结构变化 进行模拟单选
+                if(e.target.nodeName==='I'){
+                    $(e.target).toggleClass('checked')
+                    var num=$('.bottom_right_content .checked').length
+                    
+                    if($('.bottom_right_content i').length===num){
+                        $('.kuang').addClass('checked')
+                    }else(
+                        $('.kuang').removeClass('checked')
+                    )
+                    $('.bottom_right_content .shengcheng').removeClass('xuan')
+                    $('.bottom_right_content .shengcheng').has('.checked').addClass('xuan')
+                    
+                    // $('.bottom_right_content i').not($('input:checked')).parents('.shengcheng').css('border','1px solid #ffffff')
+                    return
+                }
+                
+                var id = $(this).attr('sid')
+                console.log(id)
+                // 点击右侧标题找到树形菜单对应位置
+                for(var i=0;i<$('.bottom_left li').length;i++){
+                    if($('.bottom_left li').eq(i).attr('sid')===id){
+                        
+                        $('.bottom_left li div').css('background','')
+                        $('.bottom_left li div').eq(i).css('background','yellow')
+    
+                    }
+                }
+                // 重新生成右边标题
+                $('.titlebox').html(createPathHtml(id));
+                // 找到右边标题对应的
+                for(var i=0;i<$('.titlebox span').length;i++){
+                    if($('.titlebox div').eq(i).attr('sid')===id){
+                        $('.titlebox div').eq(i).attr('class','active')
+                        
+                    }
+                }
+                // 重新生成右边内容
+                $('.bottom_right_content').html(createFileHtml(id))
+                
+            })
+            // 全选
+            
+            $('.kuang').on('click',function(){
+                if($('.bottom_right_content i').length){
+                    
+                    $(this).toggleClass('checked')
+                    var n=$('.bottom_right_title .checked').length
+                    if(n){
+                        $('.bottom_right_content i').addClass('checked')
+                        
+                    }else{
+                        $('.bottom_right_content i').removeClass('checked')
+                        
+                    }
+                    
+                }
+                $('.bottom_right_content .shengcheng').removeClass('xuan')
+                $('.bottom_right_content .shengcheng').has('.checked').addClass('xuan')
+                
+                
+            })
+            // 框选
+            document.onmousedown = function (e){
+                if(e.target.nodeName==='INPUT'){
+                    return
+                }
+                
+                if(!($(e.target).is($('.bottom_right_content'))||$(e.target).is($('.bottom_right')))){
+                    return
+                }
+                // 给每一个功能一个开关 点击的了功能键再能失焦事件
+                if(creatn||newNamen){
+                    $('input').blur()
+                }
+                if(e.target.nodeName!=='I'&e.target.nodeName!=='SPAN'){
+                    $('i').removeClass('checked')
+                    $('.bottom_right_content .shengcheng').removeClass('xuan')
+                    
+                }
+                // 创建一个叫div的框
+                var newDiv = document.createElement('div');
+                // down下去鼠标的位置
+				var downDisX = e.clientX;
+				var downDisY = e.clientY;
+                document.onmousemove = function (e){
+                    if(Math.abs(e.clientX - downDisX)>10||Math.abs(e.clientY - downDisY)>10){
+                        // 当到范围才能出现div
+                        newDiv.classList.add('miaov');
+                        document.body.appendChild(newDiv);
+                        newDiv.style.width = Math.abs(e.clientX - downDisX)	+ 'px';
+                        newDiv.style.height = Math.abs(e.clientY - downDisY)	+ 'px';
+                        newDiv.style.left = Math.min(e.clientX,downDisX)	+ 'px';
+                        newDiv.style.top =Math.min(e.clientY , downDisY)	+ 'px';
+                        // 要和所有的div进行检测
+                        var hits = document.querySelectorAll('.shengcheng')
+                        for( var i = 0; i < hits.length; i++ ){
+                            if(collision(newDiv,hits[i])){
+                                $(hits[i]).find('i').addClass('checked')
+                                var num=$('.bottom_right_content .checked').length
+                                if($('.bottom_right_content i').length===num){
+                                    $('.kuang').addClass('checked')
+                                }else(
+                                    $('.kuang').removeClass('checked')
+                                )
+                            }else{
+                                $(hits[i]).find('i').removeClass('checked')
+                            }
+                        }
+                        $('.bottom_right_content .shengcheng').removeClass('xuan')
+                        $('.bottom_right_content .shengcheng').has('.checked').addClass('xuan')
+                    }
+                    
+                }
+                document.onmouseup = function (e){
+					document.onmousemove = document.onmouseup = null;
+					newDiv.remove();
+				}
+                
+                
+            }
+            // 位置是否重合函数
+            function collision(dragEl,hitedEl){
+				var dragRect = getRect(dragEl);
+				var hitedRect = getRect(hitedEl); 
+
+				if(
+					dragRect.right < hitedRect.left || 
+					dragRect.bottom < hitedRect.top ||
+					dragRect.left > hitedRect.right ||
+					dragRect.top > hitedRect.bottom
+				){
+					return false
+				}
+				return true
+            }
+            // 返回元素离可视区域
+            function getRect(el){
+				return el.getBoundingClientRect();
+            }
+            // 提示框运动
+            var fullTipBox = $('.tishi');
+            var timer = null;
+
+            function tip(cls,value){
+                fullTipBox[0].style.transition = 'none';
+                fullTipBox.css('top',-40);
+                fullTipBox.text(value);
+                fullTipBox.removeClass('red').removeClass('green').addClass(cls);
+                setTimeout(function (){
+                    fullTipBox.css('top',50);
+                    fullTipBox[0].style.transition = '.3s';
+                    
+                })	
+                clearTimeout(timer)
+                timer = setTimeout(function (){
+                    fullTipBox.css('top',-32);	
+                },2000)	
+            }
+            // 
+            // 点击删除
+            $('.del').on('click',function(){
+                var a=$('.shengcheng').has('.checked')
+                if(a.length<1){
+                    tip('red','请选中文件')
+                    return
+                }
+                a=a.map(function(index,item){
+                    return $(this).attr('sid')
+                })
+                var ss=[]
+                for(var i=0;i<a.length;i++){
+                    ss=ss.concat(getChildAllById(a[i]))
+                    // a是一个对象 把a的每一项转成数字
+                    ss=ss.concat(Number(a[i]))
+                }
+                // 数组去重 把选中的删除（包括他的全部子集）刷新数据
+                for(var i=0;i<ss.length;i++){
+                    for(var j=0;j<data.length;j++){
+                        if(data[j].id===ss[i]){
+                            data.splice(j,1)
+                        }
+                    } 
+                }
+                tip('green','删除成功')
+                // 重新生成左侧的树
+                $('.shu').html(createTreeHtml(-1))
+                
+                $('.titlebox').html(createPathHtml(1));
+                $('.bottom_right_content').html(createFileHtml(1));
+            })
+            // 通过传入id找出他的所有子集并且形成一个新数组arr
+            var getChild=[]
+            function getChildAllById(id){
+				var arr = [];
+				for( var i = 0; i < data.length; i++ ){
+					if(data[i].pid == id){
+						arr.push(data[i].id);
+					}
+				}
+                
+                var arrLength=arr.length
+                if(arrLength){
+                    // 不会改变原数组  返回一个复制完了的数组
+                    getChild=getChild.concat(arr)
+
+                    for(var i=0;i<arr.length;i++){
+                        
+                        getChildAllById(arr[i])
+                    }
+                }
+                	
+				return getChild;
+            }
+
+
+
+            
+
+            // 重命名
+            
+            var newNamen
+            $('.newName').on('click',function(){
+                var newNamehtml=$('.bottom_right_content').html()
+                newNamen=1
+                if(newNamen){
+                    var offon=true
+                    var current=$('.shengcheng').has('.checked')
+                    if(current.length>1){
+                        tip('red','只能选中一个文件')
+                        return
+                    }
+                    if(current.length<1){
+                        tip('red','请选中文件')
+                        return
+                    }          
+                    current.find('p').addClass('yincang')
+                    current.find('.jiaodian').addClass('xianshi').focus()
+                    current.find('.jiaodian').blur(function(){
+                        newNamen=0
+                        console.log($('this'))
+                        // 通过id找到同一级的title   如果有相同的  开一定时器报错  return
+                        // 找到重命名的id
+                        var id = $('.shengcheng').has('.checked').attr('sid');
+                        var chongxie=current.find('.jiaodian').val()
+                        // 找到重命名id父级
+                        for( var j = 0; j < data.length; j++ ){
+                            if(data[j].id == id){
+                                var chongxiefu=data[j].pid
+                            }
+                        }
+                        // 找到重命名id父级的所有子集attr
+                        for(var k=0;k<data.length;k++){
+                            if(data[k].pid == chongxiefu){
+                                if(data[k].title==chongxie){
+                                    $('.chongming').attr('style','display:block')
+                                    $('.bottom_right_content').html(newNamehtml)
+                                    setTimeout(function(){
+                                        $('.chongming').attr('style','display:none')
+                                    },1000)
+                                    tip('red','已经有这个名字')
+                                    offon=false
+                                }
+                            }
+                        }
+                        if(offon){
+                            jiance()
+                            tip('green','重命名成功')
+                        }
+
+                    })
+                    // 重命名不重名的时候执行的函数
+                    function jiance(){
+                        var id = $('.shengcheng').has('.checked').attr('sid');
+                        var current=$('.shengcheng').has('.checked')
+                        current.find('p').html(current.find('.jiaodian').val())
+                        current.find('p').removeClass('yincang')
+                        
+                        current.find('.jiaodian').removeClass('xianshi')
+                        
+                        
+                        // 循环找到对应数据中的title修改数据重新渲染
+                        for( var i = 0; i < data.length; i++ ){
+                            if(data[i].id == id){
+                                data[i].title=current.find('.jiaodian').val();
+                            }
+                        }
+                        // 重新渲染树
+                        
+                        $('.shu').html(createTreeHtml(-1))
+                        
+                        
+                    }
+                }
+
+            })
+            // 找到指定id所有的子孙节点
+			function getChildsAllById(id){
+				// 先找子级
+				var arr = [];
+
+				for( var i = 0; i < data.length; i++ ){
+					if(data[i].pid == id){
+						arr.push(data[i]);
+						arr = arr.concat(getChildsAllById(data[i].id))
+					}	
+				}
+
+				return arr;	
+			}
+            
+            // 接收一个数组，数组中存的id，找到每一个id所有的子孙
+            // 包含自身
+			function getChildsAllByIds(ids){
+				// 先找子级
+				var arr = [];
+
+				for( var i = 0; i < ids.length; i++ ){
+					arr = arr.concat(getChildsAllById(ids[i]))
+				}
+
+				return arr;	
+            }
+            // 根据传入的id，找到这个id下面所有的子级，是否包含某个name
+			// 如果包含返回true，不包含返回false
+			function isChildExistName(id,title){
+				var childs = getChildsById(id);
+				
+				for( var i = 0; i < childs.length; i++ ){
+					if(childs[i].title === title){
+						return true
+					} 
+				}
+
+				return false;	
+			}
+            // 点击新建文件夹
+            
+            var creatn
+            var creatm=1
+            if(creatm){
+                $('.creatNewFile').on('click',function(){
+                    creatm=0
+                    var yuanlai=$('.bottom_right_content').html()
+                
+                    if($('.bottom_right_content input').length===0){
+                        $('.bottom_right_content').html('')
+                    
+                    }
+                    creatn=1
+                    
+                    if(creatn){
+                        var filesHtml=$('.bottom_right_content').html();
+                        var newFilecreattime=Date.now()
+                        filesHtml += '<div class="shengcheng" sid="'+newFilecreattime+'">\
+                                            <div>\
+                                                <i></i>\
+                                            </div>\
+                                            <div class="diantu" >\
+                                                <img src="img/folder-b.png"/>\
+                                            </div>\
+                                            <div class="mingzi">\
+                                                <input type="text" class="jiaodian xianshi"/>\
+                                                <p class="pp yincang"></p>\
+                                            </div>\
+                                        </div>'
+                        
+                        $('.bottom_right_content').html(filesHtml)
+                        var newfile=$('div[sid='+newFilecreattime+']')
+                        newfile.find('input').focus()
+                        // 获取自己写的文件名
+                        newfile.find('input').blur(function(){
+                            // 把开关关上
+                            creatn=0
+                            creatm=1
+                            var s= $('.bottom_right_title').find('.active').attr('sid')
+                            if(!s){
+                                s=1
+                            }
+                            var htmlnew=$(this).val()
+                        
+                            console.log(!isChildExistName(s,htmlnew))
+                            console.log(htmlnew)
+                            if(htmlnew){
+                                var nnn=true
+                            }
+                            
+                            if(!isChildExistName(s,htmlnew)&nnn){
+                                console.log(1)
+                                $(this).addClass('yincang')
+                            
+                                $(this).next().attr('style','display:block')
+                                $(this).next().html(htmlnew)
+                                
+                                
+                                // 添加数据
+                                console.log(s)
+                                var neFilew={
+                                        title:htmlnew,
+                                        id:newFilecreattime,
+                                        pid:s
+                                    }
+                                data.push(neFilew)
+                                console.log(data)
+                                // 重新渲染页面
+                                $('.shu').html(createTreeHtml(-1))
+                                // 找到树形原来位置
+                                for(var i=0;i<$('.bottom_left li').length;i++){
+                                    if($('.bottom_left li').eq(i).attr('sid')===s){
+                                        
+                                        $('.bottom_left li div').css('background','')
+                                        $('.bottom_left li div').eq(i).css('background','yellow')
+                    
+                                    }
+                                }
+                                tip('green','新建成功')
+                                // 名字为空的时候
+                            }else if(!htmlnew){
+                                $('.bottom_right_content').html(yuanlai)
+                                tip('red','名字不能为空')
+                                // 名字重复的时候
+                            }else if(isChildExistName(s,htmlnew)){
+                                
+                                $('.bottom_right_content').html(yuanlai)
+                                tip('red','已经有此文件')
+                            }
+                        })
+                    }
+                })
+            }
+            // 点击移动文件夹
+            var qinqi=[]
+            var onf=1
+            $('.moveTo').on('click',function(){
+                
+                var current=$('.shengcheng').has('.checked')
+                if(current.length<1){
+                    tip('red','请选中文件')
+                    return
+                }
+                var moveDiv=$('.tan')
+                moveDiv.attr('style','display:block')
+                var a=$('.shengcheng').has('.checked')
+                a=a.map(function(index,item){
+                    return $(this).attr('sid')
+                })
+                for(var i=0;i<a.length;i++){
+                    createTreeHtmllast(a[i])
+                    getlian(a[i])
+                }
+                
+                $('.movecontent').html($('.shu').html())
+                var trueBtn=$('.trueBtn')
+                $('.movecontent').on('click','div',function(e){
+                    
+                    // 找到弹出对应的树形位置
+                    
+                    // 获取到点的id
+                    var movess = $(this).parent().attr('sid');
+                    $('.trueBtn').prop('disabled',false)
+                    for(var i=0;i<$('.movecontent li').length;i++){
+                        if($('.movecontent li').eq(i).attr('sid')===movess){
+                            $('.movecontent div').css('background','')
+                            $('.movecontent div').eq(i).css('background','yellow')
+                        }
+                    }
+                    // 循环选中的亲戚链
+                    for(var j=0;j<qinqi.length;j++){
+                        if(qinqi[j]==movess){
+                            tip('red','不可移动')
+                            $('.trueBtn').prop('disabled',true)
+                            break
+                        }
+                        
+                         
+                    }
+                    
+                    $('.trueBtn').on('click',function(){
+                        for(var i=0;i<a.length;i++){
+                            getItemByIdgai(a[i],movess)
+                        }
+                        $('.tan').attr('style','none')
+                        $('.shu').html(createTreeHtml(-1))
+                
+                        $('.titlebox').html(createPathHtml(1));
+                        $('.bottom_right_content').html(createFileHtml(1));
+                        tip('green','移动成功')
+                        
+                       
+                    })
+                    
+                    e.preventDefault()
+                })
+            })
+            $('.closeImg').on('click',function(){
+                $('.tan').attr('style','display:none')
+            })
+            $('.closeBtn').on('click',function(){
+                $('.tan').attr('style','display:none')
+            })
+            // 根据id找到数据中的某一项 修改
+			function getItemByIdgai(gid,gaiid){
+				for( var i = 0; i < data.length; i++ ){
+					if(data[i].id == gid){
+                        
+                        data[i].pid=gaiid
+					}
+				}
+	
+            }
+            
+            function getlian(sid){
+                for(var i=0;i<data.length;i++){
+                    // 找到自己
+                    if(data[i].id==sid){
+                        qinqi.push(data[i].id)
+                        //找到父级
+                    }else if(data[i].id==getItemById(sid).pid){
+                        qinqi.push(data[i].id)
+                    }
+                }
+            }
+            // 找所有子集
+           
+            function createTreeHtmllast(id){
+                var childs = getChildsByIdlast(id)
+                
+                if(childs.length){
+                    for(var i=0;i<childs.length;i++){
+                        createTreeHtmllast(childs[i])
+                    }
+                    
+                }
+            }
+            function getChildsByIdlast(id){
+				var arr = [];
+				for( var i = 0; i < data.length; i++ ){
+					if(data[i].pid == id){
+						arr.push(data[i].id);
+					}
+				}
+                qinqi=qinqi.concat(arr)	
+				return arr;
+			}
+
+            // 为什么  checkbox的disabled不能用attr 
+            // 因为disabled跟checked一样用attr只能获取到行间他对应的值而prop就能找到这个元素的对应的true/false
+            // 还有记得 true false 不要加‘’号
+            // checked="checked"   原生中的用法
+            // 当用js判断是否被选中时使用prop,不要使用attr。
+            // checked默认值是checked而不是true。但控制台调试打印 无论属性值是什么打印出来都是true。
+            // 使用checked=‘’false‘’。不能设置为未被选中状态。只要checked有值即被选中状态。不添加此属性就不会被选中了。
+
+            // jq获取元素是静态获取
+            //   input:checked是选择器
+            // 时间排序  生成结构记录时间戳
+            // 每一个传入js文件用匿名函数自执行   防止污染   就是变量自己用
+            // 函数调用记得分号
+            // 用户名两丛
+            // 删除选出子孙与原来比较删除
+            // down 一个几个函数
+            // 行间  style="height:100px,width:100px"
+    </script>      
+</body>
+</html>
